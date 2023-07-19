@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo_bbva.png" alt="Logo BBVA" class="logo">
+        </div>
+        <h1>Cajero Automático</h1>
+        <label for="selectAccount">Selecciona una cuenta:</label>
+        <select id="selectAccount"></select>
+        <input type="password" id="passwordInput" placeholder="Ingresa tu contraseña">
+        <button id="loginBtn">Ingresar</button>
+        <div id="actions" class="hidden">
+            <h2>Acciones:</h2>
+            <button id="checkBalanceBtn">Consultar saldo</button>
+            <button id="depositBtn">Ingresar monto</button>
+            <button id="withdrawBtn">Retirar monto</button>
+        </div>
+        <div id="balance" class="hidden">
+            <h2>Saldo actual:</h2>
+            <p id="balanceAmount"></p>
+        </div>
+        <div id="depositForm" class="hidden">
+            <h2>Ingresar monto:</h2>
+            <input type="number" id="depositAmount" min="10" max="990">
+            <button id="depositConfirmBtn">Ingresar</button>
+        </div>
+        <div id="withdrawForm" class="hidden">
+            <h2>Retirar monto:</h2>
+            <input type="number" id="withdrawAmount" min="10" max="990">
+            <button id="withdrawConfirmBtn">Retirar</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
